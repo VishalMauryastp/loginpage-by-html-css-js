@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    height: 100vh;
+}
+legend{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;   
+}
+label{
+    font-size: 25px;
+}
+#User,#Pass,button{
+    padding: 10px  20px;
+}
+fieldset{
+    padding: 30px  70px;
+}
+button{
+    font-size: 20px;
+}
+button{
+    width: 135px;
+}
+.btn{
+    margin-top: 12px;
+    display: flex;
+    gap: 25px;
+}
+#fw-pass{
+    margin-top: 20px;
+    float: right;
+}
+.resetp{
+    display: grid;
+    justify-content:center ;
+    place-items: center;
+
+}
+.submit-btn{
+    width: 135px;
+    padding: 10px 20px;
+    margin-top: 40px;
+}
+#forgot-pw {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    z-index: 1;
+    background: #fff;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  #forgot-pw:target {
+    height: 100%;
+    opacity: 1;
+  }
+  .close {
+    position: absolute;
+    right: 1.5rem;
+    top: 0.5rem;
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: inherit;
+  }

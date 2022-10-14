@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+
+header {
+    background-color: #726cee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo,
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 10px 15px;
+}
+
+.logo ul li,
+.login {
+    width: 100px;
+    padding: 10px 20px;
+    text-align: center;
+
+}
+
+.logo ul li:hover,
+.login:hover {
+    background-color: gray;
+    color: black;
+    border-radius: 3px;
+}
+
+.logo ul li a,
+.login-button ul li a {
+    /* display: flex; */
+    color: white;
+    text-decoration: none;
+    /* width: 120px; */
+    /* margin: 15px;
+    padding: 15px; */
+}
+
+.login-button ul li button {
+    border: 0;
+
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.login {
+    margin-right: 10px;
+}
+
+.sublogo {
+    margin-left: -20px;
+    display: none;
+}
+
+.sublogo ul {
+    display: block;
+
+}
+
+.sublogo ul li {
+    padding: 5px 10px;
+}
+
+.logo ul li:hover .sublogo {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -calc();
+    background-color: #726cee;
+
+}
+
+.logo ul li:hover .sublogo {
+    border-radius: 10px;
+    display: block;
+    /* margin: 10px; */
+}
+
+.whole {
+    
+    display: flex;
+    /* flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    place-items: center; */
+    height: 90vh;
+  
+
+}
+
+.part2 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    min-width: 100vw;
+}
+.first{
+    width: 505px;
+    height: 614px;
+   
+}
+
+.second img {
+    width: 505px;
+    height: 614px;
+ 
+}
+.first>h1{
+    margin-top: 35px;
+    font-size: 91px;
+    line-height: 76px;
+}
+.first>p{
+
+margin-top: 65px;
+width: 416px;
+font-size: 20px;
+}
+.first button{
+    font-size: 23px;
+    color: white;
+    border:none ;
+    background-color: black;
+    margin-top: 65px;
+    padding: 10px 23px;
+    border-radius: 10px;
+}
+.svg{
+    margin-top: 120px;
+    margin-right: 25px;
+}
+.svg>img{
+    margin-right: 20px;
+}

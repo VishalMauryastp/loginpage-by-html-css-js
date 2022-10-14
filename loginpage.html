@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+    <form action="./intro-section-with-dropdown-navigation-main/index.html" id="enter">
+        <fieldset>
+            <legend>Login Page</legend>
+            <label for="usrname">Username:</label>
+            <input type="Email" id="User" required>
+            <br><br>
+            <label for="psw">Password:</label>
+            <input type="Password" id="Pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required>
+            <br><br>
+            <div class="btn">
+                <button onclick="login()">Login</button>
+                <button type="reset">Reset</button>
+            </div>
+            <!-- <input type="button" value="Forget Password?" id="fw-pass" > -->
+            <a href="#forgot-pw" class="forgot-pw" id="fw-pass">Forgot Password?</a>
+        </fieldset>
+
+
+    </form>
+    <div id="forgot-pw">
+        <form action="#enter" class="form" method="get">
+            <a href="#" class="close">&times;</a>
+            <fieldset class="resetp">
+                <legend>Reset Password</legend>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="User" required>
+                </div>
+                <input type="submit" value="Submit" id="sub" class="submit-btn">
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        function login() {
+            var uname = document.getElementById("User").value
+            var passwrd = document.getElementById("Pass").value
+
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if (uname == '') {
+                alert("Plz Enter User Name");
+            }
+            else {
+                if (passwrd == '') {
+                    alert("Plz Enter Password ");
+                }
+                else if (!filter.test(uname)) {
+                    alert("Plz Enter Valid User Name");
+
+                }
+                else if (passwrd.length < 8 || passwrd.length > 8) {
+                    alert("Password min and max length is 8");
+                }
+                else {
+                    alert("Thank you for login!");
+
+                }
+            }
+        }
+
+        document.getElementById('sub').addEventListener('click', () =>
+        {
+            alert("New password sent to your Email");
+        } )
+    
+
+    </script>
+</body>
+
+
+</html>
